@@ -322,12 +322,46 @@ export default class Locale {
     this.firstDayOfWeek = clamp(firstDayOfWeek, 1, daysInWeek);
     this.masks = masks;
     this.timezone = timezone || undefined;
-    this.dayNames = this.getDayNames('long');
-    this.dayNamesShort = this.getDayNames('short');
-    this.dayNamesShorter = this.dayNamesShort.map(s => s.substring(0, 2));
-    this.dayNamesNarrow = this.getDayNames('narrow');
-    this.monthNames = this.getMonthNames('long');
-    this.monthNamesShort = this.getMonthNames('short');
+    this.dayNames = [
+      'კვირა',
+      'ორშაბათი',
+      'სამშაბათი',
+      'ოთხშაბათი',
+      'ხუთშაბათი',
+      'პარასკევი',
+      'შაბათი',
+    ];
+    this.dayNamesShort = ['კვ', 'ორ', 'სა', 'ოთ', 'ხუ', 'პა', 'შა'];
+    this.dayNamesShorter = ['კვ', 'ორ', 'სა', 'ოთ', 'ხუ', 'პა', 'შა'];
+    this.dayNamesNarrow = ['კვ', 'ორ', 'სა', 'ოთ', 'ხუ', 'პა', 'შა'];
+    this.monthNames = [
+      'იანვარი',
+      'თებერვალი',
+      'მარტი',
+      'აპრილი',
+      'მაისი',
+      'ივნისი',
+      'ივლისი',
+      'აგვისტო',
+      'სექტემბერი',
+      'ოქტომბერი',
+      'ნოემბერი',
+      'დეკემბერი',
+    ];
+    this.monthNamesShort = [
+      'იან',
+      'თებ',
+      'მარ',
+      'აპრ',
+      'მაი',
+      'ივნ',
+      'ივლ',
+      'აგვ',
+      'სექ',
+      'ოქტ',
+      'ნოე',
+      'დეკ',
+    ];
     this.amPm = ['am', 'pm'];
     this.monthData = {};
     // Bind methods
